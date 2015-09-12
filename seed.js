@@ -41,7 +41,7 @@ db.organizations.insert([{
     { bandwidth: 10, measure: "t", cost: 40 },
     { bandwidth: 100, measure: "k", cost: 54 },
     { bandwidth: 1000, measure: "m", cost: 48 },
-    { bandwidth: 10, measure: "m", cost: 97 },
+    { bandwidth: 10, measure: "m", cost: 97 }
   ]
 },{
   "name" : "Little People Campus",

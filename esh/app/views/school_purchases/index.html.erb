@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>School Purchases</title>
+	<script src="Chart.js"></script>
+</head>
+<body>
+	<h1>SchoolPurchases#index</h1>
+	<% @schools.each do |school| %>
+	<%= school.name %>
+		<% @school_purchases.each do |purchase| %>
+		<% if school.ben == purchase.ben %>
+		<%= purchase.bandwidth %>
+		<% end %>
+	<!-- <%= purchase.ben %> -->
+	<% end %>
+	
+	<% end %>
+
+	<canvas id="myChart" width="400" height="400"></canvas>
+
+</body>
+</html>

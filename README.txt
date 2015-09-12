@@ -1,4 +1,3 @@
-
 # EducationSuperhighway Coding Challenge
 
 Using the technology stack of your choice, produce a web application which displays a bar chart of the average cost per megabit of bandwidth for each organization in the sample set provided.
