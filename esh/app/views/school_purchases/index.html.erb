@@ -1,24 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>School Purchases</title>
-	<script src="Chart.js"></script>
-</head>
-<body>
-	<h1>SchoolPurchases#index</h1>
+
+	<h1>School Purchases</h1>
 	<% @schools.each do |school| %>
 	<%= school.name %>
 		<% @school_purchases.each do |purchase| %>
-		<% if school.ben == purchase.ben %>
-		<%= purchase.bandwidth %>
-		<% end %>
+			<% if school.ben == purchase.ben %>
+			<%= purchase.bandwidth %>
+			<% end %>
 	<!-- <%= purchase.ben %> -->
-	<% end %>
+		<% end %>
 	
 	<% end %>
-
-	<canvas id="myChart" width="400" height="400"></canvas>
-
-</body>
-</html>
+	
+<div class="row">
+  <!-- Column Chart --> 
+  <div class="col-xs-6">
+    <h3>Total Purchases Per School</h3>
+    <%= column_chart @school_purchases.group(:ben).count %>
+  </div>
