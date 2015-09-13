@@ -10,7 +10,7 @@ class SchoolPurchasesController < ApplicationController
   	end
 
   	def find_school
-	  	@school = School.find_by_id params[:school_ben]
+	  	@school = School.find_by_id params[:ben]
 	  end
 
 end
