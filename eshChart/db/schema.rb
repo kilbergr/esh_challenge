@@ -11,17 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150913043117) do
+ActiveRecord::Schema.define(version: 20150913044430) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "school_purchases", force: :cascade do |t|
     t.string   "ben"
+    t.string   "school_ben"
     t.integer  "bandwidth"
     t.string   "measure"
     t.integer  "cost"
-    t.string   "school_ben"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(version: 20150913043117) do
   create_table "schools", force: :cascade do |t|
     t.string   "name"
     t.string   "ben"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

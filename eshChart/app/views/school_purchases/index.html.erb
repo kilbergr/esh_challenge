@@ -1,8 +1,7 @@
-<%= @school.name %>
-<%= @school.purchases %>
+
 	<h1>School Purchases</h1>
 	<% @schools.each do |school| %>
-	<%= school.name %>
+	<%= school.name %>: 
 		<% @school_purchases.each do |purchase| %>
 			<% if school.ben == purchase.ben %>
 				<% if purchase.measure=="k" %>
@@ -13,7 +12,7 @@
 					<% purchase.bandwidth = purchase.bandwidth*1000000 %>
 				<% end %>
 
-				<%= purchase.bandwidth / purchase.cost %>
+				<%= purchase.bandwidth / purchase.cost %> 
 			<% end %>
 	<!-- <%= purchase.ben %> -->
 		<% end %>

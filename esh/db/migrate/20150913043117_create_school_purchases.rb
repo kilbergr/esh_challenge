@@ -5,8 +5,9 @@ class CreateSchoolPurchases < ActiveRecord::Migration
       t.integer :bandwidth
       t.string :measure
       t.integer :cost
+      t.string :school_ben
 
-      t.timestamps null: true
+      t.timestamps null: false
     end
   end
 end

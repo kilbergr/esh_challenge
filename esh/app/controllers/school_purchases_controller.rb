@@ -1,7 +1,8 @@
 class SchoolPurchasesController < ApplicationController
   def index
-  	@school_purchases = SchoolPurchase.all
-  	@schools = School.all
+  	@school_purchase = SchoolPurchase.find_by(:ben)
+  	@school = School.find_by(:ben)
+
   end
 
   private 
